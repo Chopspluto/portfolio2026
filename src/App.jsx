@@ -6,11 +6,13 @@ import { FiLinkedin } from "react-icons/fi";
 import { FaGithubAlt } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiCodepen } from "react-icons/fi";
+import ParticleCursor from './components/ParticleCursor';
 
 function App() {
 
   return (
     <main>
+      <ParticleCursor/>
       <Hero/>
       <Section title="About">
           I create calm, thoughtful digital experiences where design and code meet.

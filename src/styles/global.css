@@ -5,31 +5,25 @@
     padding: 0;
     box-sizing: border-box;
     color: #000;
+    cursor: none;
+}
+
+canvas {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 .cursor {
     z-index: 1000;
-    width: 20px;
-    height: 20px;
-    background: #fff;
+    color: #fff;
     position: fixed;
     border-radius: 50%;
     top: 0px;
     left: 0px;
     transform: translate(-50%, -50%);
     pointer-events: none;
-}
-
-.cursor:before {
-    content: "";
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 body {
