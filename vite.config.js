@@ -4,7 +4,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/portfolio2026/",
+  base: "/",
   plugins: [
     react(),
     visualizer({
