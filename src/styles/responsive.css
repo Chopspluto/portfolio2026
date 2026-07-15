@@ -1,0 +1,276 @@
+@media (max-width: 768px) {
+    .bg{
+        background-image: url(../assets/background-mobile.webp);
+    }
+    .home-floater.particle-1 {
+        top: 5%;
+        left: 75%; 
+    }
+    .home-floater.particle-2 {
+        display: none;
+    }
+    .home-floater.particle-3 {
+        display: none;
+    }
+    .home-floater.particle-4 {
+        top: 50%;
+        left: 65%;
+    }
+    .home-floater.particle-5 {
+        top: 70%;
+        left: 0%;
+    }
+    .home-floater.particle-6 {
+        top: 35%;
+        left: 5%;
+    }
+    .hero {
+        padding: 6vh 8vw;
+        background-size: cover;
+    }
+    .tagline{
+        width: 50%;
+        top: 22%;
+        left: 10%;
+    }
+    .info1{
+        width: 40%;
+        padding: 0.2rem;
+        position: absolute;
+        right: 3%;
+        top: 32%;
+        font-size: 0.6rem;
+        transform: rotate(5deg);
+    }
+    .crochet-asset {
+        top: 32%;
+        left: -15%;
+        transform: scale(0.4);
+    }
+    .puzzle-asset {
+        top: 62%;
+        left: -15%;
+        transform: scale(0.5);
+    }
+    .globe-asset {
+        left: 63%;
+        top: 71%;
+        transform: scale(0.4);
+    }
+    .note-asset {
+        left: 60%;
+        top: 47%;
+        transform: scale(0.3);
+    }
+    /* HOBBIES */
+    .container {
+        width: 90vw;
+        height: 80vh;
+        padding: 1rem;
+        left: calc(50% - 45vw);
+        top: calc(50% - 40vh);
+    }
+    .cozy-stage {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .hobbies-col.left, .hobbies-col.right {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 1rem;
+    }
+    .hex-card {
+        width: 70px;
+        height: 70px;
+    }
+    .hobby-icon-box {
+        width: 40px;
+        height: 40px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .hobby-label {
+        font-size: 0.6rem;
+    }
+    .cozy-bubble {
+        top: -50px;
+        padding: 0.5rem 0.5rem;
+        font-weight: 600;
+        font-size: 0.6rem;
+        max-width: 280px;
+    }
+    .center-character {
+        margin-top: 2.5rem;
+    }
+    .character-img-container {
+        width: 100px;
+    }
+    .mindful-badge {
+        margin-top: 0.3rem;
+        gap: 0.5rem;
+        padding: 0.3rem;
+    }
+    .mindful-badge span{
+        font-size: 0.6rem;
+    }
+    /* LANGUAGE */
+    .lang-container {
+        width: 90vw;
+        height: 60vh;
+        padding: 1rem;
+        left: calc(50% - 45vw);
+        top: calc(50% - 30vh);
+    }
+    .lang-content {
+        width: 100%;
+        height: 100%;
+        padding: 2rem 2rem;
+    }
+    .lang {
+        margin: 1rem 0;
+    }
+    .lang h3 {
+        width: 8rem;
+    }
+    /* CONTACT */
+    .contact-container {
+        width: 90vw;
+        height: 60vh;
+        left: calc(50% - 45vw);
+        top: calc(50% - 30vh);
+    }
+    .contact-content {
+        margin: 7rem 0 2rem 2rem;
+        align-items: flex-start;
+    }
+    .contact-content span {
+        margin: 0.4rem 0;
+    }
+
+    /* PROJECTS */
+    .modal-container {
+        width: 90vw;
+        height: 90vh;
+        padding: 1em;
+        left: calc(50% - 45vw);
+        top: calc(50% - 45vh);
+    }
+    .project-showcase-container {
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem;
+    }
+    .showcase-header {
+        justify-content: flex-start;
+        margin: 2rem auto 0 auto;
+    }
+    .portfolio-logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: -0.5px;
+        color: var(--theme-primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        transition: color 0.5s ease;
+    }
+    .showcase-stage {
+        gap: 2rem;
+        justify-content: center;
+    }
+    .project-info-panel {
+        max-width: 280px;
+        align-items: center;
+    }
+    .project-title {
+        font-size: clamp(2rem, 4.5vw, 3.5rem);
+    }
+    .project-desc {
+        font-size: clamp(0.9rem, 1.4vw, 1.3rem);
+    }
+    .project-tags {
+        gap: 0.5rem;
+    }
+    .tag-pill {
+        margin: 0 0;
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
+    .view-study-btn {
+        gap: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+    .view-study-btn span {
+        font-size: 0.8rem;
+    }
+    .phones-showcase-wrapper {
+        display: none;
+    }
+    .case-study-backdrop {
+        padding: 1.5rem;
+    }
+    .modal-hero-banner {
+        padding: 3rem 1.5rem 2rem 1.5rem;
+    }
+    .modal-title {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        margin: 0.8rem 0 1rem 0;
+    }
+    .modal-desc {
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+    .demo-site {
+        margin: 1rem 0;
+    }
+    .modal-metadata {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    .meta-item {
+        font-size: 0.95rem;
+        justify-content: left;
+    }
+    .modal-content-body {
+        padding: 1rem;
+    }
+    .detail-card-transparent {
+        padding: 1.2rem;
+    }
+    .detail-card {
+        background: var(--theme-card-bg);
+        color: var(--theme-btn-text);
+        padding: 1.2rem;
+        border-radius: 24px;
+        border: 1px solid var(--theme-card-border);
+    }
+    .process-tag{
+        display: grid;
+        gap: 10px;
+    }
+    /* .arrow{
+
+    } */
+    .detail-grid {
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        gap: 1rem;
+    }
+    .detail-flex {
+        padding: 1rem;
+    }
+    .tech-grid{
+        display: grid;
+        gap: 0.3rem;
+    }
+    .button-close {
+        width: 200px;
+    }
+}

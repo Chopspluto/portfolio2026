@@ -1,0 +1,307 @@
+/* Floating Ambient Sparkles */
+.floaters-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.home-floater {
+    width: 4rem;
+    position: absolute;
+    animation: floatParticle 6s ease-in-out infinite alternate;
+    z-index: 5;
+}
+
+.home-floater.particle-1 {
+    top: 5%;
+    left: 38%; 
+}
+
+.home-floater.particle-2 {
+    top: 30%;
+    right: 25%;
+    animation-delay: 1.5s;
+}
+
+.home-floater.particle-3 {
+    top: 38%;
+    left: 73%;
+    animation-delay: 3s;
+}
+
+.home-floater.particle-4 {
+    top: 38%;
+    left: 29%;
+    animation-delay: 2s;
+}
+
+.home-floater.particle-5 {
+  top: 60%;
+  left: 8%;
+  animation-delay: 4s;
+}
+.home-floater.particle-6 {
+  top: 7%;
+  left: 8%;
+  animation-delay: 4s;
+}
+
+.bg {
+    background-image: url(../assets/background.webp);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.img_assets {
+    z-index: 5;
+    transition: .3s ease-in-out;
+}
+
+.img_assets:hover {
+    filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white) drop-shadow(0 0 10px rgba(255, 179, 103, 0.9)) drop-shadow(0 0 10px rgba(255, 179, 103, 0.9));
+    transition: .3s ease-in-out;
+}
+
+.shadow{
+    filter: drop-shadow(-6px 15px 2px rgba(0, 0, 0, 0.4));
+}
+.shadow1{
+    position: absolute;
+    width: 270px;
+    height: 100px;
+    border-radius: 50%;
+    left: -5%;
+    top: 65%;
+    background: rgba(100, 30, 0, 0.3);
+    transform: skew(13deg, 0deg);
+    filter: blur(15px);
+}
+.shadow2{
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+    left: -38%;
+    top: 65%;
+    background: rgba(100, 30, 0, 0.3);
+    transform: skew(20deg, -10deg);
+    filter: blur(15px);
+}
+/* CROCHET */
+.crochet-asset {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.9);
+}
+
+/* PUZZLE */
+.puzzle-asset {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* COFFEE */
+  .coffee-asset {
+    position: absolute;
+    /* left: calc(50% - 450px); /*467
+    top: calc(50% + 185px); 195 */
+    top: 75%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.72);
+}
+
+.hello-asset {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(1115px, 220px) scale(0.2);
+}
+
+/* GLOBE */
+.globe {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    /* border: 2px solid #fff; */
+    /* background: url(/portfolio2026/src/assets/Globe.png); */
+    /* background-position: -137px; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    background: transparent;
+    /* box-shadow: inset 3px 3px 20px #3b1e0f75, inset -3px -3px 80px #3b1e0f75; */
+    transition: .5s ease-in-out;
+    /* filter: sepia(0.4) opacity(0.2); */
+}
+.globe-asset {
+    position: absolute;
+    left: 79.4%;
+    top: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.62) rotate(27deg);
+}
+
+.globe:hover {
+    border: 1px solid white;
+    /* transform: translate(1238px, 643px) scale(0.8) rotate(27deg); */
+    filter: drop-shadow(1px 0 0 white) drop-shadow(-1px 0 0 white) drop-shadow(0 1px 0 white) drop-shadow(0 -1px 0 white) drop-shadow(0 0 20px rgba(209, 136, 75, 0.9)) drop-shadow(0 0 20px rgba(209, 136, 75, 0.9));
+    /* animation: spin 3.5s linear infinite; */
+}
+
+@keyframes spin {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: -140px;
+    }
+}
+
+.language {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid white;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.6s ease;
+    pointer-events: none;
+    color: #fff;
+    font-family: "Handlee", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    animation: none;
+}
+
+.text {
+    color: black;
+    transform: translate(7px, 7px);
+}
+
+.english {
+    background: url(../assets/englishIcon.webp);
+    background-position: center;
+    background-size: cover;
+    /* transform: translate(-20px, 40px) scale(0.5) rotate(0); */
+}
+
+.globe:hover .english {
+    opacity: 1;
+    transform: translate(-80px, 110px) scale(1) rotate(-95deg);
+    transition-delay: 0s;
+}
+
+.language span {
+    display: block;
+    transform: translate(0px, -30px);
+}
+
+.sinhala {
+    background: url(../assets/sinhalaIcon.webp);
+    background-position: center;
+    background-size: cover;
+    /* transform: translate(-20px, 10px) scale(0.5) rotate(0); */
+}
+
+.globe:hover .sinhala {
+    opacity: 1;
+    transform: translate(-85px, 35px) scale(1) rotate(-80deg);
+    transition-delay: 0.1s;
+}
+
+.hindi {
+    background: url(../assets/indiaIcon.webp);
+    background-position: center;
+    background-size: cover;
+    /* transform: translate(0px, -20px) scale(0.5) rotate(0); */
+}
+
+.globe:hover .hindi {
+    opacity: 1;
+    transform: translate(-50px, -35px) scale(1) rotate(-45deg);
+    transition-delay: 0.2s;
+}
+
+.turkish {
+    background: url(../assets/turkeyIcon.webp);
+    background-position: center;
+    background-size: cover;
+    /* transform: translate(30px, -40px) scale(0.5) rotate(0); */
+}
+
+.globe:hover .turkish {
+    opacity: 1;
+    transform: translate(15px, -75px) scale(1) rotate(-25deg);
+    transition-delay: 0.3s;
+}
+
+.tamil {
+    background: url(../assets/indiaIcon.webp);
+    background-position: center;
+    background-size: cover;
+    /* transform: translate(60px, -30px) scale(0.5) rotate(0); */
+}
+
+.globe:hover .tamil {
+    opacity: 1;
+    transform: translate(90px, -80px) scale(1) rotate(10deg);
+    transition-delay: 0.4s;
+}
+
+@keyframes popup {
+    0% {
+        transform: translate(220px, 600px);
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translate(220px, 550px);
+        visibility: visible;
+    }
+}
+
+/* NOTE */
+.note-asset {
+    position: absolute;
+    display: flex;
+    left: 84%;
+    top: 40%;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.6);
+}
+
+/* .flower {
+    transform: translate(20px, 655px) scale(0.75);
+}
+
+.flower:hover {
+    transform: translate(20px, 655px) scale(0.8);
+    filter: drop-shadow(2px 0 0 white) drop-shadow(-2px 0 0 white) drop-shadow(0 2px 0 white) drop-shadow(0 -2px 0 white) drop-shadow(0 0 20px rgba(255, 164, 107, 0.9)) drop-shadow(0 0 20px rgba(255, 164, 107, 0.9));
+} */
+
