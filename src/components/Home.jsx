@@ -56,7 +56,7 @@ function Home() {
           <h4>Creative Developer & Designer</h4>
         </div>
       </div>
-      <span className="info1">Welcome!<br/>Click around to explore my page</span>
+      <span className="info1">Welcome!<br/>Click on the white dots to explore</span>
       <span className="tagline">Hello! I'm a creative developer and designer who loves bringing absurd ideas to life through code.</span>
       {/* <div className="info2">
         <span >There are 10 hidden easter eggs. Find them to earn a badge!</span>
@@ -135,9 +135,7 @@ function Home() {
             <div onClick={(e) => e.stopPropagation()}>
               <div className="contact-container">
                 <Contact/>
-                <button className="close-button" onClick={() => closeModal(setShowContact)}>
-                  {/* <img src={Close} /> */}X
-                  </button>
+                <button className="close-button" onClick={() => closeModal(setShowContact)}>X</button>
               </div>
             </div>
         )}

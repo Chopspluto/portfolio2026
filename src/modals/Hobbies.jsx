@@ -23,211 +23,95 @@ import Baking from "../assets/baking.webp";
 import Model from "../assets/3dmodel.webp";
 import Puzzles from "../assets/puzzles.webp";
 import Travel from "../assets/travel.webp";
-
-
-const HOBBIES = [
-  {
-    id: 'crocheting',
-    title: 'Crocheting',
-    mood: 'create',
-    img: Crocheting,
-    bgColor: '#ffeef4',
-    quote: "My excuse for buying more yarn? I might need that colour someday."
-  },
-  {
-    id: 'modeling',
-    title: '3D - Models',
-    mood: 'create',
-    img: Model,
-    bgColor: '#fdf3e7',
-    quote: "There's something really satisfying about turning a plain grey cube into something real."
-  },
-  {
-    id: 'coding',
-    title: 'Coding',
-    mood: 'creative',
-    img: Coding,
-    bgColor: '#eefbf4',
-    quote: "Half the time I'm solving problems. The other half I'm wondering why it worked."
-  },
-  {
-    id: 'baking',
-    title: 'Baking',
-    mood: 'recharge',
-    img: Baking,
-    bgColor: '#fff4ea',
-    quote: "The smell of chocolate makes the whole house feel alive"
-  },
-  {
-    id: 'traveling',
-    title: 'Traveling',
-    mood: 'recharge',
-    img: Travel,
-    bgColor: '#edf8ff',
-    quote: "I like wandering until I accidentally find my new favourite place."
-  },
-  {
-    id: 'puzzles',
-    title: 'Jigsaw Puzzles',
-    mood: 'slow',
-    img: Puzzles,
-    bgColor: '#f0efff',
-    quote: "One piece at a time. No rushing."
-  }
-];
-
-const MOODS = [
-  { id: 'all', label: '✨ All Escapes' },
-  { id: 'slow', label: '🌸 Slow Down' },
-  { id: 'recharge', label: '⚡ Recharge' },
-  { id: 'create', label: '🎨 Stay Creative' }
-];
-
+import Contact from './Contact';
+import Service1 from '../assets/service1.webp';
+import Service2 from '../assets/service2.webp';
+import Service3 from '../assets/service3.webp';
+import Service4 from '../assets/service4.webp';
 
 export default function Hobbies() {
-  const [activeMood, setActiveMood] = useState('all');
-  const [selectedHobby, setSelectedHobby] = useState(null);
-  const [isSoundPlaying, setIsSoundPlaying] = useState(false);
-  const [bubbleMessage, setBubbleMessage] = useState("Welcome to my cozy corner! Click any hobby to explore");
-  const [audioCtx, setAudioCtx] = useState(null);
-  const [breathingTimer, setBreathingTimer] = useState(0);
-  const [isBreathing, setIsBreathing] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
-  /* Handle Hobby Selection */
-  const handleSelectHobby = (hobby) => {
-    setSelectedHobby(hobby);
-    setBubbleMessage(hobby.quote);
-    
-    const freqs = [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50];
-    const index = HOBBIES.findIndex(h => h.id === hobby.id);
-    playCozyChime(freqs[index % freqs.length]);
+   const openModal = (setModal) => {
+    setModal(true);
   };
 
-  /* Mindful Breathing Exercise */
-  useEffect(() => {
-    let interval = null;
-    if (isBreathing) {
-      interval = setInterval(() => {
-        setBreathingTimer(prev => (prev + 1) % 8);
-      }, 1000);
-    } else {
-      setBreathingTimer(0);
-    }
-    return () => clearInterval(interval);
-  }, [isBreathing]);
-
-  const leftHobbies = HOBBIES.slice(0, 3);
-  const rightHobbies = HOBBIES.slice(3, 6);
+  const closeModal = (setModal) => {
+    setModal(false);
+  };
 
   return (
     <div className="cozy-wrapper">
-      {/* Background Floating Sparkles */}
-      <div className="cozy-ambient-bg">
-        <Sparkles className="floating-particle particle-1" />
-        <Heart className="floating-particle particle-2" />
-        <Sparkles className="floating-particle particle-3" />
-        <Heart className="floating-particle particle-4" />
-        <Sparkles className="floating-particle particle-5" />
-      </div>
-
-      <div className={`cozy-frame mood-${activeMood === 'all' ? 'slow' : activeMood}`}>
-        
-        {/* Header Title & Subtitle */}
-        <header className="cozy-header">
-          <span className="cozy-subtitle">
-            The hobbies that keep me alive and living.
-          </span>
-        </header>
-
-        {/* Central Stage Showcase */}
-        <div className="cozy-stage">
-          
-          {/* Left Column Hobbies */}
-          <div className="hobbies-col left">
-            {leftHobbies.map(hobby => {
-              const isActive = selectedHobby?.id === hobby.id;
-              const isDimmed = activeMood !== 'all' && hobby.mood !== activeMood;
-
-              return (
-                <div 
-                  key={hobby.id}
-                  onClick={() => handleSelectHobby(hobby)}
-                  className={`hex-card ${isActive ? 'active' : ''} ${isDimmed ? 'dimmed' : ''}`}
-                >
-                  <div className="hex-shadow-wrapper">
-                    <div className="hex-shape">
-                      <div className="hex-inner-border">
-                        <div className={`hobby-icon-box ${hobby.bgClass}`}>
-                          <img src={hobby.img}/>
-                        </div>
-                        <span className="hobby-label">{hobby.title}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+      <div className='cozy-stage'>
+        <div>
+          <div className="cozy-header">
+            <h3>SERVICES</h3>
+            <span className="cozy-subtitle">
+              What I can build for you.
+            </span>
           </div>
-
-          {/* Central Girl Avatar */}
-          <div className="center-character">
-            <div className="character-glow"></div>
-            {/* Animated Speech Bubble */}
-            <span className="cozy-bubble">{bubbleMessage}</span>
-            <div className="character-img-container"
-              onClick={() => {
-                const quotes = [
-                  "Time enjoyed wasting is not wasted time! ☕",
-                  "Take a deep breath. You are doing wonderfully 🌸",
-                  "Whatever happens, happens for good!",
-                  "Creativity blooms in quiet moments ✨"
-                ];
-                const randomQ = quotes[Math.floor(Math.random() * quotes.length)];
-                setBubbleMessage(randomQ);
-                playCozyChime(880);
-              }}>
-              <img 
-                src={cozyGirlCenterImg} 
-                alt="Cozy girl in pajamas holding a warm coffee mug" 
-                className="character-img"
-              />
+          <div className='cozy-service-grid'>
+            <div className='services-card'>
+              <img className='service-img' src={Service1} />
+              <h5>Website design and development</h5>
+              <span></span>
             </div>
-
-            <div className="mindful-badge">
-              <Coffee className="coffee-bounce" /> <span>Click me for daily mindfulness</span>
+            <div className='services-card'>
+              <img className='service-img' src={Service2} />
+              <h5>Landing Pages</h5>
             </div>
+            <div className='services-card'>
+              <img className='service-img' src={Service3} />
+              <h5>Interactive Web</h5></div>
+            <div className='services-card'>
+              <img className='service-img' src={Service4} />
+              <h5>Redesigns</h5></div>
           </div>
-
-          {/* Right Column Hobbies */}
-          <div className="hobbies-col right">
-            {rightHobbies.map(hobby => {
-              const isActive = selectedHobby?.id === hobby.id;
-              const isDimmed = activeMood !== 'all' && hobby.mood !== activeMood;
-
-              return (
-                <div 
-                  key={hobby.id}
-                  onClick={() => handleSelectHobby(hobby)}
-                  className={`hex-card ${isActive ? 'active' : ''} ${isDimmed ? 'dimmed' : ''}`}
-                >
-                  <div className="hex-shadow-wrapper">
-                    <div className="hex-shape">
-                      <div className="hex-inner-border">
-                        <div className={`hobby-icon-box ${hobby.bgClass}`}>
-                          <img src={hobby.img}/>
-                        </div>
-                        <span className="hobby-label">{hobby.title}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+          <div className='cozy-header'>
+            <h3>HOW IT WORKS</h3>
+            <div className='service-process'>
+              <h5>Talk</h5>
+              <h5>→</h5>
+              <h5>Plan</h5>
+              <h5>→</h5>
+              <h5>Design</h5>
+              <h5>→</h5>
+              <h5>Build</h5>
+              <h5>→</h5>
+              <h5>Launch</h5>
+            </div>
+            
           </div>
-
         </div>
 
+        <div className='submit-form'>
+            <form name="project-inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+              <div className='cozy-header'>
+                <h3>LEAVE A NOTE ON MY DESK</h3>
+              </div>
+              <input type="hidden" name="form-name" value="project-inquiry" />
+              <p hidden>
+                <label>Don't fill this out if you're human:<input name="bot-field" /></label>
+              </p>
+              <label>Your Name<input type="text" name="name" defaultValue='What should I call you?' required /></label>
+              <label>Email<input type="email" name="email" defaultValue="you@example.com" required /></label>
+              <label>What are you looking for?
+                <select name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="Website Design & Development">Website Design & Development</option>
+                  <option value="Landing Page">Landing Page</option>
+                  <option value="UI/UX Design">UI/UX Design</option>
+                  <option value="Interactive Website">Interactive Website</option>
+                  <option value="Website Redesign">Website Redesign</option>
+                  <option value="Something else">Something else</option>
+                </select>
+              </label>
+              <label>Tell me a little about your idea<textarea name="message" rows="5" required /></label>
+              <button type="submit">Send inquiry →</button>
+            </form>
+        </div>
       </div>
+
     </div>
   );
 }

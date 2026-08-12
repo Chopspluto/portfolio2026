@@ -121,7 +121,7 @@
     /* left: calc(50% - 450px); /*467
     top: calc(50% + 185px); 195 */
     top: 75%;
-    left: 20%;
+    left: 15%;
     display: flex;
     justify-content: center;
     align-items: center;

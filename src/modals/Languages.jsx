@@ -13,7 +13,7 @@ function Languages() {
         <Heart className="floating-particle particle-4" />
         <Sparkles className="floating-particle particle-5" />
       </div>
-
+      
       <h2>Languages I Know</h2>
       <div className='lang'>
         <span className='lang-img lang1'></span>
@@ -46,6 +46,7 @@ function Languages() {
         <h3>Türkçe</h3>
         <span>Beginner (A1)</span>
       </div>
+
     </div>
     </>
     
