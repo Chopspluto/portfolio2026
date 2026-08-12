@@ -4,10 +4,10 @@ import Note_asset from "../assets/Note.webp";
 import Puzzle from "../assets/puzzleGirl.webp";
 import Crochet from "../assets/crochetGirl.webp";
 import { useRef, useState } from "react";
-import Hobbies from '../modals/Hobbies';
 import Languages from '../modals/Languages';
 import Contact from '../modals/Contact';
 import Projects from "../modals/Projects";
+import Services from "../modals/Services";
 import { ImHeart as Heart } from "react-icons/im";
 import { HiOutlineSparkles as Sparkles, HiOutlineCake as Cake } from 'react-icons/hi2';
 import { TbFlowerFilled as Flower } from "react-icons/tb";
@@ -82,7 +82,7 @@ function Home() {
         {showHobby && (
             <div onClick={(e) => e.stopPropagation()}>
               <div className="container">
-                <Hobbies/>
+                <Services/>
                 <button className="close-button" onClick={() => closeModal(setShowHobby)}>X</button>
               </div>
             </div>
