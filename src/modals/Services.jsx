@@ -68,7 +68,7 @@ export default function Services() {
               <img className='service-img' src={Service4} />
               <h5>Redesigns</h5></div>
           </div>
-          <div className='cozy-header'>
+          <div className='cozy-header services-process'>
             <h3>HOW IT WORKS</h3>
             <div className='service-process'>
               <h5>Talk</h5>
@@ -81,7 +81,6 @@ export default function Services() {
               <h5>→</h5>
               <h5>Launch</h5>
             </div>
-            
           </div>
         </div>
 
